@@ -53,9 +53,10 @@
     <UnityVersion>2020.3.25f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Assets\All\scripts\Preffab.cs" />
+    <Compile Include="Assets\All\scripts\wepon.cs" />
+    <Compile Include="Assets\All\scripts\Enemy.cs" />
     <Compile Include="Assets\All\scripts\Move.cs" />
-    <Compile Include="Assets\All\scripts\NewBehaviourScript.cs" />
-    <Compile Include="Assets\All\scripts\movecum.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -690,6 +691,12 @@
     </Reference>
     <Reference Include="Unity.2D.IK.Runtime">
       <HintPath>Library\ScriptAssemblies\Unity.2D.IK.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Cinemachine">
+      <HintPath>Library\ScriptAssemblies\Cinemachine.dll</HintPath>
+    </Reference>
+    <Reference Include="com.unity.cinemachine.editor">
+      <HintPath>Library\ScriptAssemblies\com.unity.cinemachine.editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Animation.Triangle.Runtime">
       <HintPath>Library\ScriptAssemblies\Unity.2D.Animation.Triangle.Runtime.dll</HintPath>

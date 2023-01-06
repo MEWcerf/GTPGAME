@@ -8,6 +8,8 @@ public class Move : MonoBehaviour
     public float runSpeed = 10.0f;
     public float walkSpeed = 5.0f;
     public float runDuration = 3.0f;
+    public float ball;
+    public GameObject bullet;
 
 
     private Rigidbody2D rb;
@@ -126,9 +128,17 @@ public class Move : MonoBehaviour
             walk();
 
         }
-
-  
+   
 
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("ball"))
+        {
+            ball++;
+            Destroy(collision.gameObject);
+        }
+    }
+
 }
 
