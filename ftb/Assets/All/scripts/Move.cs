@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class Move : MonoBehaviour
 {
-
+    [Header("Контроллер")]
     public float runSpeed = 10.0f;
     public float walkSpeed = 5.0f;
     public float runDuration = 3.0f;
-    public float ball;
+
+    [Header("Подбор")]
+    public static int ball;
     public GameObject bullet;
 
 
@@ -131,12 +133,21 @@ public class Move : MonoBehaviour
    
 
     }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("ball"))
+        if (ball == 0)
         {
-            ball++;
-            Destroy(collision.gameObject);
+            if (collision.CompareTag("ball"))
+            {
+                ball++;
+                Destroy(collision.gameObject);
+            }
+
+        }
+        else
+        {
+
         }
     }
 

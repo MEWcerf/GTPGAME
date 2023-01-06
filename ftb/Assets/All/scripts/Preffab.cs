@@ -27,7 +27,9 @@ public class Preffab : MonoBehaviour
             if (other.collider.CompareTag("Enemy"))
             {
                 other.collider.GetComponent<Enemy>().TakeDamage(damage);
+                
                 Destroy(gameObject);
+                
             }
             if (other.collider.CompareTag("Ground"))
             {

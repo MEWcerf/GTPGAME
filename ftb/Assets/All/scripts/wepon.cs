@@ -25,10 +25,22 @@ public class wepon : MonoBehaviour
         transform.rotation = Quaternion.Euler(0f, 0f, rotateZ + offset);
 
         
-        if(Input.GetMouseButtonDown(0))
+
+        if (Move.ball != 0)
+            {
+            if(Input.GetMouseButtonDown(0))
+            {
+                Instantiate(bullet, point.position, transform.rotation );
+                Move.ball = 0;
+            }
+
+        }
+        else
         {
-            Instantiate(bullet, point.position, transform.rotation );
+
+            
         }
         
     }
+    
 }
